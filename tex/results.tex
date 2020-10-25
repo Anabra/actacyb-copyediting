@@ -38,7 +38,6 @@
 	
 	The actual commands for the binary generation are detailed in Program~code~\ref{code:binary-gen}. That script has two parameters: \pilcode{N} and \pilcode{llvm-in}. \pilcode{N} is the optimization level for the LLVM Optimizer, and \pilcode{llvm-in} is the LLVM program generated from the optimized GRIN code.
 	
-	\vspace{-0.5cm}
 	\begin{codeFloat}[h]
 		\begin{bash}
 			opt-7 -ON <llvm-in> -o <llvm-out> 
@@ -52,7 +51,6 @@
 	
 	As for the runtime measurements of the binary, we used the \pilcode{perf} tool, the runtime of Idris and the minimal runtime of GRIN. The \pilcode{perf} command can be seen in Program~code~\ref{code:binary-measurements} which was used to count the number of executed user space instructions, stores, loads and to measure the execution speeds. The runtimes were used to determine the memory usage, and to make sure that Idris' garbage collector is never triggered.
 
-	\vspace{-0.5cm}
 	\begin{codeFloat}[h]
 		\begin{bash}
 			perf stat -e cpu/mem-stores/u -e "r81d0:u" -e instructions:u <executable>
@@ -155,7 +153,6 @@
 		\end{minipage}
 	\end{center}
 
-	\newpage
 	\subsection{Type level functions}
 	
 	The GRIN statistics for this program may not be particularly interesting, but they demonstrate that the GRIN optimizations work for programs with many type level computations as well.

@@ -10,7 +10,7 @@
 	
 	\subsection{Dead Data Elimination in GRIN}
 	
-	In the context of GRIN, dead data elimination removes dead fields of data constructors (or nodes) for both definition- and use-sites. In the followings, we will refer to definition-sites as \emph{producers} and to use-sites as \emph{consumers}. Producers and consumers are in a \emph{many-to-many} relationship with each other. A producer can define a variable used by many consumers, and a consumer can use a variable possibly defined by many producers. It only depends on the control flow of the program. Program~code~\ref{code:dde-simple} illustrates dead data elimination on a very simple example with a single producer and a single consumer.
+	In the context of GRIN, dead data elimination removes dead fields of data constructors (or nodes) for both definition- and use-sites. In the following, we will refer to definition-sites as \emph{producers} and to use-sites as \emph{consumers}. Producers and consumers are in a \emph{many-to-many} relationship with each other. A producer can define a variable used by many consumers, and a consumer can use a variable possibly defined by many producers. It only depends on the control flow of the program. Program~code~\ref{code:dde-simple} illustrates dead data elimination on a very simple example with a single producer and a single consumer.
 	
 	\begin{codeFloat}[h]
 		\begin{center}

@@ -11,7 +11,7 @@
 
 
 \usepackage[toc,page]{appendix}
-\usepackage{hyperref}
+% \usepackage{hyperref}
 \usepackage{float}
 \usepackage{newfloat}
 \usepackage{footnote}
@@ -64,10 +64,10 @@
 \DeclarePairedDelimiter\set\{\}
 
 
-\hypersetup{%
-	colorlinks=true,% hyperlinks will be coloured
-	allcolors=blue,% hyperlink text will be green
-}
+% \hypersetup{%
+% 	colorlinks=true,% links will be coloured
+% 	allcolors=blue,% hyperlink text will be green
+% }
 
 \newcommand*\Let[2]{\State #1 $\gets$ #2}
 \algrenewcommand\algorithmicrequire{\textbf{Precondition:}}
@@ -156,7 +156,7 @@
 							\end{tcbclipinterior}
 						}
 }
-% takes 1 parameters, the default value for the first one is 0
+% takes 1 parameter, the default value for the first one is 0
 \newtcblisting{haskellNum}[1]
 { listing engine    = minted
 ,	minted style    = colorful
@@ -293,5 +293,5 @@
 \makeatother
 
 % this is needed for LNCS
-\setlength\arraycolsep{6pt}
-\setlength\tabcolsep{6pt}
+% \setlength\arraycolsep{6pt}
+% \setlength\tabcolsep{6pt}
